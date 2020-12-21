@@ -1,11 +1,12 @@
+import java.util.Arrays;
 import java.lang.Math;
 public class SortsDriver{
 
-  public static void main(String[] args) {
-    int[] array = generateArr(100,250);
-    String bubble = arrToString(Sorts.bubbleSort(array));
-    String selection = arrToString(Sorts.selectionSort(array));
-    String insertion = arrToString(Sorts.insertionSort(array));
+  public static void main(int length, int seed) {
+    int[] array = generateArr(length,seed);
+    String bubble = Arrays.toString(Sorts.bubbleSort(array));
+    String selection = Arrays.toString(Sorts.selectionSort(array));
+    String insertion = Arrays.toString(Sorts.insertionSort(array));
     System.out.println("Bubble sort: " + bubble);
     System.out.println("Selection sort: " + selection);
     System.out.println("Insertion sort: " + insertion);
@@ -20,13 +21,5 @@ public class SortsDriver{
     return array;
   }
 
-  public static String arrToString(int[] array) {
-    String arr = "[";
-    for (int i = 0; i < array.length; i++) {
-      arr += array[i] + ", ";
-    }
-    arr += "]";
-    return arr;
-  }
 
 }
