@@ -4,7 +4,6 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data) {
-    for (int i = 0; i < data.size(); i++) {
       int cur = 0;
       for(int i = 0; i < data.length; i++){
         for(int j = i++; j < data.length; j++){
@@ -15,7 +14,6 @@ public class Sorts{
           }
         }
       }
-    }
   }
 
   public static void selectionSort(int[] data) {
@@ -28,7 +26,7 @@ public class Sorts{
             }
             int smallest = data[index];
             data[index] = data[i];
-            data[i] = smallerNumber;
+            data[i] = smallest;
     }
   }
 
