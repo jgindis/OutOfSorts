@@ -18,8 +18,19 @@ public class Sorts{
     }
   }
 
-  public static void selectionSort(int[] data){
-    
+  public static void selectionSort(int[] data) {
+    for (int i = 0; i < data.length-1; i++) {
+            int index = i;
+            for (int j = i + 1; j < data.length; j++) {
+                if (data[j] < data[index]) {
+                    index = j;
+                }
+            }
+            int smallest = data[index];
+            data[index] = data[i];
+            data[i] = smallerNumber;
+    }
   }
+
 
 }
